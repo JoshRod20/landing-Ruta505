@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 
 import logo from "../assets/logo.png";
+import logoBlanco from "../assets/logoBlanco.png";
 import pinolitoVolando from "../assets/pinolito/volando.png";
 import pinolitoPensando from "../assets/pinolito/pensando.png";
 import pinolitoAlegre from "../assets/pinolito/alegre.png";
@@ -109,7 +110,7 @@ export default function LandingPage() {
       <header className={`r505-nav ${scrolled ? "r505-nav--scrolled" : ""}`}>
         <div className="r505-nav__inner">
           <a href="#top" className="r505-nav__brand">
-            <img src={logo} alt="Ruta 505" />
+            <img src={scrolled ? logo : logoBlanco} alt="Ruta 505" />
           </a>
 
           <nav className="r505-nav__links">
@@ -374,7 +375,7 @@ export default function LandingPage() {
               <tr>
                 <th>Aspecto</th>
                 <th className="r505-table__highlight">
-                  <img src={logo} alt="Ruta 505" />
+                  <img src={logoBlanco} alt="Ruta 505" />
                 </th>
                 <th>Otras plataformas</th>
               </tr>
