@@ -15,7 +15,7 @@ import {
   Handshake,
   Check,
   Minus,
-  Clock,
+  Download,
 } from "lucide-react";
 
 import logo from "../assets/logo.png";
@@ -455,15 +455,28 @@ export default function LandingPage() {
             Sé parte de la red de comunidades, artesanos y guías que ya
             están construyendo la Ruta 505.
           </p>
-          <div className="r505-hero__actions">
-            {/* 
+          {/* <div className="r505-hero__actions">
+            
             <a href="#" className="r505-btn r505-btn--lg r505-btn--light">
               Quiero ser aliado <ArrowRight size={18} />
             </a>
-            */}
+            
             <span className="r505-btn r505-btn--ghost-light r505-btn--lg r505-btn--disabled">
               <Clock size={18} /> App próximamente
             </span>
+          </div>
+          */}
+
+          
+          <div className="r505-hero__actions">
+            <a
+              href="http://20.98.53.104:8080/Ruta505.apk"
+              className="r505-btn r505-btn--ghost-light r505-btn--lg"
+              download="Ruta505.apk"
+            >
+              <Download size={18} />
+              Descarga la App
+            </a>
           </div>
         </Reveal>
       </section>
