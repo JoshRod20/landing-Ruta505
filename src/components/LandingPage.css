@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
+/* Scroll suave para los enlaces ancla del menú. */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* ---------------------------------------------------------- TOKENS -- */
 .r505 {
   --verde-oscuro: #065f33;
@@ -54,6 +64,11 @@
   display: block;
 }
 
+/* Evita que la barra fija tape los títulos al saltar a una sección. */
+.r505 section[id]:not(#top) {
+  scroll-margin-top: 72px;
+}
+
 /* ------------------------------------------------------ SCROLL REVEAL */
 .reveal {
   opacity: 0;
@@ -67,10 +82,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .reveal,
+  .parada-marker {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  .r505-float {
+    animation: none;
   }
 }
 
@@ -110,6 +129,7 @@
   color: var(--verde-oscuro);
   position: relative;
   padding: 4px 0;
+  transition: color 0.25s ease;
 }
 .r505-nav__links a::after {
   content: "";
@@ -137,6 +157,12 @@
 }
 .r505-nav__mobile {
   display: none;
+}
+
+/* Sobre el hero oscuro (sin scroll) el menú va en blanco para que se lea. */
+.r505-nav:not(.r505-nav--scrolled) .r505-nav__links a,
+.r505-nav:not(.r505-nav--scrolled) .r505-nav__burger {
+  color: var(--blanco);
 }
 
 /* ------------------------------------------------------------ BUTTONS */
@@ -312,31 +338,27 @@
   margin: 0 auto;
   padding: 110px 28px 40px;
 }
+.r505-section--tint {
+  background: linear-gradient(180deg, rgba(149, 193, 31, 0.08), transparent 60%);
+}
+
+/* Sección oscura a todo el ancho; el contenido va en .r505-section__inner. */
 .r505-section--dark {
   max-width: none;
   background: var(--verde-oscuro);
   color: var(--blanco);
+  padding: 110px 0 90px;
+}
+.r505-section__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
 }
 .r505-section--dark .r505-section__text p {
   color: rgba(255, 255, 255, 0.82);
 }
 .r505-section--dark h2 {
   color: var(--blanco);
-}
-.r505-section--dark .r505-section__inner,
-.r505-section--dark .r505-section__grid {
-  max-width: 1180px;
-  margin: 0 auto;
-}
-.r505-section--dark {
-  padding-left: 0;
-  padding-right: 0;
-}
-.r505-section--dark > .r505-section__grid {
-  padding: 0 28px;
-}
-.r505-section--tint {
-  background: linear-gradient(180deg, rgba(149, 193, 31, 0.08), transparent 60%);
 }
 
 .r505-section__title {
@@ -591,6 +613,12 @@
 .r505-cta .r505-hero__actions {
   justify-content: center;
 }
+.r505-cta .r505-cta__nota {
+  margin: 18px auto 0;
+  max-width: 46ch;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
 .r505-cta__mascota {
   width: 140px;
   margin: 0 auto 18px;
@@ -681,6 +709,10 @@
     background: var(--crema);
     padding: 20px 28px 26px;
     font-weight: 600;
+    color: var(--verde-oscuro);
+  }
+  /* Los enlaces del menú móvil van sobre fondo crema: siempre en verde. */
+  .r505-nav .r505-nav__mobile a:not(.r505-btn) {
     color: var(--verde-oscuro);
   }
 }

@@ -104,6 +104,11 @@ export default function LandingPage() {
     { href: "#diferencia", label: "Por qué Ruta 505" },
   ];
 
+  const descargarAPK = () => {
+  window.location.href =
+    "http://20.98.53.104:8080/Ruta505.apk";
+};
+
   return (
     <div className="r505">
       {/* ---------------------------------------------------------- NAV */}
@@ -468,16 +473,13 @@ export default function LandingPage() {
           */}
 
           
-          <div className="r505-hero__actions">
-            <a
-              href="http://20.98.53.104:8080/Ruta505.apk"
-              className="r505-btn r505-btn--ghost-light r505-btn--lg"
-              download="Ruta505.apk"
-            >
-              <Download size={18} />
-              Descarga la App
-            </a>
-          </div>
+          
+
+          <button className="r505-btn r505-btn--lg r505-btn--light" 
+          onClick={descargarAPK}>
+            Descargar Ruta505
+          </button>
+          
         </Reveal>
       </section>
 
