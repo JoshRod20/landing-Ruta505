@@ -18,15 +18,17 @@ import {
   Download,
 } from "lucide-react";
 
-import logo from "../assets/logo.png";
-import logoBlanco from "../assets/logoBlanco.png";
-import pinolitoVolando from "../assets/pinolito/volando.png";
+import logo from "../assets/logoHorizontal.png";
+import logoBlanco from "../assets/logoHorizontalBlanco.png";
+import pinolitoGuia from "../assets/pinolito/pinolitoGuia.png";
 import pinolitoPensando from "../assets/pinolito/pensando.png";
 import pinolitoAlegre from "../assets/pinolito/alegre.png";
 import pinolitoEmocionado from "../assets/pinolito/emocionado.png";
 import pinolitoFeliz from "../assets/pinolito/feliz.png";
 import pinolitoCaminando from "../assets/pinolito/caminando.png";
-import pinolitoDinamico from "../assets/pinolito/dinamico.png";
+import pinolitoPrincipal from "../assets/pinolito/pinolitoPrincipal.png";
+import pinolitoEmocionado2 from "../assets/pinolito/emocionado.png";
+import iconoUbicacion from "../assets/iconoUbicacion.png";
 
 import "./LandingPage.css";
 
@@ -48,7 +50,7 @@ function useReveal(options = {}) {
           observer.unobserve(node);
         }
       },
-      { threshold: 0.2, ...options }
+      { threshold: 0.2, ...options },
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -105,9 +107,8 @@ export default function LandingPage() {
   ];
 
   const descargarAPK = () => {
-  window.location.href =
-    "http://20.98.53.104:8080/Ruta505.apk";
-};
+    window.location.href = "http://20.98.53.104:8080/Ruta505.apk";
+  };
 
   return (
     <div className="r505">
@@ -146,7 +147,11 @@ export default function LandingPage() {
                 {l.label}
               </a>
             ))}
-            <a href="#cta" className="r505-btn" onClick={() => setMenuOpen(false)}>
+            <a
+              href="#cta"
+              className="r505-btn"
+              onClick={() => setMenuOpen(false)}
+            >
               Súmate a la ruta
             </a>
           </div>
@@ -164,19 +169,24 @@ export default function LandingPage() {
             <h1>
               La cultura viva de Nicaragua,
               <br />
-              <span className="r505-hero__accent">contada por quien la vive.</span>
+              <span className="r505-hero__accent">
+                contada por quien la vive.
+              </span>
             </h1>
             <p>
               Ruta 505 conecta al turista con comunidades, artesanos y guías a
               través de rutas creativas, un asistente que narra cada lugar con
-              audio contextual, y un pasaporte digital que convierte cada
-              visita en una historia propia.
+              audio contextual, y un pasaporte digital que convierte cada visita
+              en una historia propia.
             </p>
             <div className="r505-hero__actions">
               <a href="#cta" className="r505-btn r505-btn--lg">
                 Descubre la ruta <ArrowRight size={18} />
               </a>
-              <a href="#ruta" className="r505-btn r505-btn--ghost-light r505-btn--lg">
+              <a
+                href="#ruta"
+                className="r505-btn r505-btn--ghost-light r505-btn--lg"
+              >
                 ¿Cómo funciona?
               </a>
             </div>
@@ -184,8 +194,8 @@ export default function LandingPage() {
 
           <div className="r505-hero__art">
             <img
-              src={pinolitoVolando}
-              alt="Pinolito, la mascota de Ruta 505, volando"
+              src={pinolitoGuia}
+              alt="Pinolito, la mascota de Ruta 505, actuando como guía"
               className="r505-float"
             />
           </div>
@@ -212,20 +222,19 @@ export default function LandingPage() {
           <Reveal className="r505-section__text">
             <h2>¿De qué trata Ruta 505?</h2>
             <p>
-              Ruta 505 es una plataforma web y móvil que conecta al turista
-              con la oferta cultural y comunitaria de Nicaragua. A través de
-              rutas creativas diseñadas directamente por los actores
-              culturales, un asistente virtual que narra cada lugar mediante
-              audio contextual, y un pasaporte digital que convierte al
-              turista en protagonista de su propia experiencia, la plataforma
-              organiza y da visibilidad a un sector históricamente disperso
-              en el entorno digital.
+              Ruta 505 conecta a los viajeros con el alma de Nicaragua. A través
+              de rutas creativas diseñadas junto a comunidades, artesanos y
+              guías locales, cada recorrido se convierte en una experiencia
+              auténtica. Un asistente inteligente llamado Pinolito, que
+              recomienda lugares según intereses o ubicación, y un pasaporte
+              cultural digital transforma cada visita en un recuerdo
+              coleccionable: tu propia historia de viaje.
             </p>
             <p>
-              La propuesta surge como respuesta a una necesidad concreta:
-              permitir que comunidades, artesanos y guías turísticos
-              alcancen al visitante de forma directa, ordenada y verificable,
-              sin depender de intermediarios.
+              La propuesta surge como respuesta a una necesidad concreta: busca
+              cambiar la vida de las familias emprendedoras ofreciéndoles una
+              vitrina digital gratuita donde el turista de verdad pueda
+              encontrarlos.
             </p>
           </Reveal>
 
@@ -233,21 +242,24 @@ export default function LandingPage() {
             <div className="r505-feature-card">
               <Volume2 size={22} />
               <div>
-                <h3>Audio contextual</h3>
-                <p>Pinolito narra cada lugar según dónde estás parado.</p>
+                <h3>Recomendaciones de pinolito</h3>
+                <p>Obtén recomendaciones según ubicación e intereses.</p>
               </div>
             </div>
             <div className="r505-feature-card">
               <Map size={22} />
               <div>
                 <h3>Rutas creativas</h3>
-                <p>Armadas por los propios actores culturales, con costo claro.</p>
+                <p>
+                  Armadas por los propios actores culturales con costos
+                  aproximados.
+                </p>
               </div>
             </div>
             <div className="r505-feature-card">
               <BookMarked size={22} />
               <div>
-                <h3>Pasaporte digital</h3>
+                <h3>Pasaporte cultural digital</h3>
                 <p>Cada visita queda registrada como tu propia historia.</p>
               </div>
             </div>
@@ -260,20 +272,24 @@ export default function LandingPage() {
         <ParadaMarker numero="02" color="#95C11F" />
         <div className="r505-section__grid r505-section__grid--reverse">
           <Reveal className="r505-mascota">
-            <img src={pinolitoPensando} alt="Pinolito pensando" className="r505-float r505-float--slow" />
+            <img
+              src={pinolitoPensando}
+              alt="Pinolito pensando"
+              className="r505-float r505-float--slow"
+            />
           </Reveal>
           <Reveal className="r505-section__text" delay={100}>
             <span className="r505-tag">
-              <Users size={14} /> Quiénes somos
+              <Users size={30} /> ¿Quiénes somos?
             </span>
-            <h2>Un equipo nicaragüense, con los pies en Chontales</h2>
+            <h2>
+              Somos estudiantes nicaragüenses apasionados por el turismo
+              cultural y comunitario
+            </h2>
             <p>
-              Ruta 505 es desarrollado por <strong>Cuajada Salvaje</strong>,
-              un equipo de estudiantes nicaragüenses comprometidos con el
-              fortalecimiento del turismo cultural y comunitario del país. El
-              equipo combina conocimiento en comunicación, tecnología y
-              gestión turística, con un enfoque particular en el
-              departamento de Chontales y las zonas rurales de Nicaragua.
+              Desde la comunicación, la tecnología y la gestión turística,
+              creamos <strong>Ruta 505</strong> para conectar a los viajeros con
+              las comunidades, artesanos y guías de Chontales y de todo el país.
             </p>
           </Reveal>
         </div>
@@ -290,27 +306,33 @@ export default function LandingPage() {
             <Handshake size={26} />
             <h3>Misión</h3>
             <p>
-              Conectar al turista con la cultura viva de Nicaragua, brindando
-              a las comunidades, artesanos y guías turísticos una
-              herramienta digital confiable que dé visibilidad a su oferta,
-              facilite el contacto directo con el visitante y contribuya a
-              mejorar sus ingresos.
+              Somos una plataforma tecnológica integral web y móvil dedicada a
+              fortalecer el turismo cultural y comunitario en Nicaragua.
+              Conectamos a turistas nacionales e internacionales con
+              experiencias auténticas mediante la asistencia inteligente de
+              Pinolito IA, rutas creativas personalizadas y el Pasaporte
+              Cultural Digital. Impulsamos la visibilidad y sostenibilidad
+              económica de las comunidades, guías y emprendedores locales,
+              visibilizando y dignificando a quienes históricamente han
+              preservado nuestras raíces e identidad nacional.
             </p>
           </Reveal>
           <Reveal className="r505-mv-card" delay={120}>
             <Compass size={26} />
             <h3>Visión</h3>
             <p>
-              Convertirnos en la plataforma de referencia del turismo
-              cultural y comunitario en Nicaragua, reconocida por articular
-              de manera confiable al turista, al actor cultural y a las
-              instituciones reguladoras, con proyección de expansión hacia
-              otros destinos de la región centroamericana.
+              Consolidarnos como la aplicación tecnológica líder de turismo en
+              Nicaragua, reconocida a nivel regional por transformar la forma en
+              que el mundo experimenta nuestras raíces, gastronomía, naturaleza
+              y cultura, Aspiramos a ser el ecosistema digital imprescindible
+              que une a turistas, comunidades e instituciones en un modelo de
+              turismo auténtico, sostenible y profundamente arraigado en la
+              identidad nicaragüense.
             </p>
           </Reveal>
         </div>
         <img
-          src={pinolitoAlegre}
+          src={pinolitoEmocionado2}
           alt="Pinolito alegre"
           className="r505-mascota-cameo r505-float"
         />
@@ -321,7 +343,11 @@ export default function LandingPage() {
         <ParadaMarker numero="04" color="#F39200" />
         <div className="r505-section__grid r505-section__grid--reverse">
           <Reveal className="r505-mascota">
-            <img src={pinolitoEmocionado} alt="Pinolito emocionado" className="r505-float" />
+            <img
+              src={pinolitoPrincipal}
+              alt="Pinolito emocionado"
+              className="r505-float"
+            />
           </Reveal>
           <Reveal className="r505-section__text" delay={80}>
             <span className="r505-tag">
@@ -331,9 +357,8 @@ export default function LandingPage() {
             <ul className="r505-goal-list">
               <li>
                 <TrendingUp size={18} />
-                Aumentar la visibilidad digital de los pequeños prestadores
-                de servicios culturales que hoy no figuran en ninguna
-                plataforma.
+                Aumentar la visibilidad digital de los pequeños prestadores de
+                servicios culturales que hoy no figuran en ninguna plataforma.
               </li>
               <li>
                 <Map size={18} />
@@ -343,19 +368,19 @@ export default function LandingPage() {
               </li>
               <li>
                 <Handshake size={18} />
-                Generar una fuente adicional de ingresos directos para
-                familias y comunidades rurales, sin intermediarios ni
-                comisiones por transacción.
+                Generar una fuente adicional de ingresos directos para familias
+                y comunidades rurales, sin intermediarios ni comisiones por
+                transacción.
               </li>
               <li>
                 <ShieldCheck size={18} />
-                Fortalecer la confianza del visitante mediante la alianza
-                con INTUR y el distintivo Experiencia Verificada.
+                Fortalecer la confianza del visitante mediante la alianza con
+                INTUR y el distintivo Experiencia Verificada.
               </li>
               <li>
                 <Sparkles size={18} />
-                Posicionar al departamento de Chontales como punto de
-                partida de un modelo replicable a nivel nacional.
+                Posicionar al departamento de Chontales como punto de partida de
+                un modelo replicable a nivel nacional.
               </li>
             </ul>
           </Reveal>
@@ -368,9 +393,9 @@ export default function LandingPage() {
         <Reveal className="r505-section__text r505-section__text--center">
           <h2>¿Qué nos diferencia de otras plataformas?</h2>
           <p>
-            En Nicaragua ya existen iniciativas digitales orientadas al
-            turismo, como Mapa Nicaragua, Visita Nicaragua, Vagabundo
-            Nicaragua y Passporter. Así se compara Ruta 505 frente a ellas.
+            En Nicaragua ya existen iniciativas digitales orientadas al turismo,
+            como Mapa Nicaragua, Visita Nicaragua, Vagabundo Nicaragua y
+            Passporter. Así se compara Ruta 505 frente a ellas.
           </p>
         </Reveal>
 
@@ -389,8 +414,7 @@ export default function LandingPage() {
               <tr>
                 <td>Narración del atractivo</td>
                 <td className="r505-table__highlight">
-                  <Check size={16} /> Audio contextual y geolocalizado con
-                  Pinolito
+                  <Check size={16} /> Recomendación de Pinolito según intereses y ubicación.
                 </td>
                 <td>
                   <Minus size={16} /> Información estática en texto o mapa
@@ -429,7 +453,7 @@ export default function LandingPage() {
               <tr>
                 <td>Respaldo institucional</td>
                 <td className="r505-table__highlight">
-                  <Check size={16} /> Alianza de datos con INTUR
+                  <Check size={16} /> Especializado en turismo cultural y comunitario.
                 </td>
                 <td>
                   <Minus size={16} /> Sin integración formal con el ente
@@ -441,7 +465,7 @@ export default function LandingPage() {
         </Reveal>
 
         <img
-          src={pinolitoFeliz}
+          src={pinolitoAlegre}
           alt="Pinolito feliz"
           className="r505-mascota-cameo r505-float r505-float--slow"
         />
@@ -450,15 +474,15 @@ export default function LandingPage() {
       {/* ----------------------------------------------------- CTA ----- */}
       <section className="r505-cta" id="cta">
         <img
-          src={pinolitoCaminando}
+          src={iconoUbicacion}
           alt="Pinolito caminando hacia la próxima parada"
           className="r505-cta__mascota r505-float"
         />
         <Reveal className="r505-cta__copy">
           <h2>Tu próxima parada empieza aquí</h2>
           <p>
-            Sé parte de la red de comunidades, artesanos y guías que ya
-            están construyendo la Ruta 505.
+            Sé parte de la red de actores culturales, o descubre Nicaragua de
+            una forma auténtica.
           </p>
           {/* <div className="r505-hero__actions">
             
@@ -472,20 +496,23 @@ export default function LandingPage() {
           </div>
           */}
 
-          
-          
-
-          <button className="r505-btn r505-btn--lg r505-btn--light" 
-          onClick={descargarAPK}>
+          <button
+            className="r505-btn r505-btn--lg r505-btn--light"
+            onClick={descargarAPK}
+          >
             Descargar Ruta505
           </button>
-          
         </Reveal>
       </section>
 
       {/* --------------------------------------------------- FOOTER ---- */}
       <footer className="r505-footer">
-        <img src={pinolitoDinamico} alt="" className="r505-footer__ghost" aria-hidden="true" />
+        <img
+          src={logoBlanco}
+          alt=""
+          className="r505-footer__ghost"
+          aria-hidden="true"
+        />
         <div className="r505-footer__content">
           <img src={logo} alt="Ruta 505" className="r505-footer__logo" />
           <p>Turismo cultural y comunitario · Chontales, Nicaragua</p>
