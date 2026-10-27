@@ -20,15 +20,15 @@ import {
 
 import logo from "../assets/logoHorizontal.png";
 import logoBlanco from "../assets/logoHorizontalBlanco.png";
-import pinolitoGuia from "../assets/pinolito/pinolitoGuia.png";
+import pinolitoGuia from "../assets/pinolito/PinolitoGuia.png";
 import pinolitoPensando from "../assets/pinolito/pensando.png";
 import pinolitoAlegre from "../assets/pinolito/alegre.png";
 import pinolitoEmocionado from "../assets/pinolito/emocionado.png";
 import pinolitoFeliz from "../assets/pinolito/feliz.png";
 import pinolitoCaminando from "../assets/pinolito/caminando.png";
-import pinolitoPrincipal from "../assets/pinolito/pinolitoPrincipal.png";
+import pinolitoPrincipal from "../assets/pinolito/PinolitoPrincipal.png";
 import pinolitoEmocionado2 from "../assets/pinolito/emocionado.png";
-import iconoUbicacion from "../assets/iconoUbicacion.png";
+import iconoUbicacion from "../assets/IconoUbicacion.png";
 
 import "./LandingPage.css";
 
