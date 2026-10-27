@@ -106,9 +106,10 @@ export default function LandingPage() {
     { href: "#diferencia", label: "Por qué Ruta 505" },
   ];
 
-  const descargarAPK = () => {
-    window.location.href = "http://20.98.53.104:8080/Ruta505.apk";
-  };
+const descargarAPK = () => {
+  window.location.href =
+    "https://www.dropbox.com/scl/fi/ksni670jgpv2hejhei9bk/Ruta505.apk?rlkey=lwd7mttujjtncuyrf6mjcbd85&dl=1";
+};
 
   return (
     <div className="r505">
