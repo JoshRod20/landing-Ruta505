@@ -174,10 +174,9 @@ export default function LandingPage() {
               </span>
             </h1>
             <p>
-              Ruta 505 conecta al turista con comunidades, artesanos y guías a
-              través de rutas creativas, un asistente que narra cada lugar con
-              audio contextual, y un pasaporte digital que convierte cada visita
-              en una historia propia.
+              Aplicación web y móvil de turismo cultural comunitario impulsada
+              por inteligencia artificial, desarrollada en alianza estratégica
+              con el Instituto Nicaragüense de Turismo.
             </p>
             <div className="r505-hero__actions">
               <a href="#cta" className="r505-btn r505-btn--lg">
@@ -414,7 +413,8 @@ export default function LandingPage() {
               <tr>
                 <td>Narración del atractivo</td>
                 <td className="r505-table__highlight">
-                  <Check size={16} /> Recomendación de Pinolito según intereses y ubicación.
+                  <Check size={16} /> Recomendación de Pinolito según intereses
+                  y ubicación.
                 </td>
                 <td>
                   <Minus size={16} /> Información estática en texto o mapa
@@ -453,7 +453,8 @@ export default function LandingPage() {
               <tr>
                 <td>Respaldo institucional</td>
                 <td className="r505-table__highlight">
-                  <Check size={16} /> Especializado en turismo cultural y comunitario.
+                  <Check size={16} /> Especializado en turismo cultural y
+                  comunitario.
                 </td>
                 <td>
                   <Minus size={16} /> Sin integración formal con el ente
